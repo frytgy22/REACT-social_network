@@ -1,0 +1,16 @@
+
+.item {
+    color: #0e0e3e;
+    font-weight: bold;
+}
+
+.item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px outset #0c043b;
+}
+
+.item span {
+    color: #920b0b;
+}
