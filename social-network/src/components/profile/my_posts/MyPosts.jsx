@@ -14,10 +14,10 @@ const MyPosts = () => {
             <div>
                 New post
             </div>
-            <Post message={'hello'}/>
-            <Post message={'it\'s my first post'}/>
-            <Post message={'hello!'}/>
-            <Post message={'cool'}/>
+            <Post message={'hello'} likesCount={'0'}/>
+            <Post message={'it\'s my first post'} likesCount={'12'}/>
+            <Post message={'hello!'} likesCount={'0'}/>
+            <Post message={'cool'} likesCount={'10'}/>
         </div>
 
     )
