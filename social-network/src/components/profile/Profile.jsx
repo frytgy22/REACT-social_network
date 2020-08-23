@@ -1,13 +1,11 @@
 import React from "react";
 import MyPosts from "./my_posts/MyPosts";
+import ProfileInfo from "./profile_info/ProfileInfo";
 
 const Profile = () => {
     return (
         <div>
-
-            <div>
-                <img src={'https://storage.picsave.pp.ua/download/0/3865'} alt='logo'/>
-            </div>
+            <ProfileInfo/>
 
             <MyPosts/>
         </div>
