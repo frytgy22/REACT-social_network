@@ -5,6 +5,8 @@
 
 .dialogs .dialogsItems {
     padding: 10px;
+    font-size: 20px;
+
 }
 
 .dialogsItems .dialog {
@@ -20,5 +22,5 @@
 }
 
 .messages .message {
-
+    font-size: 20px;
 }
