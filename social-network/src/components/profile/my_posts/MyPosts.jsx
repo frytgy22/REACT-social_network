@@ -2,18 +2,20 @@ import React from "react";
 import classes from "./MyPosts.module.css";
 import Post from "./post/Post";
 
-let newPostElement = React.createRef();
-
-let addPost = () => {
-    let text = newPostElement.current.value;
-    alert(text);
-}
-
 const MyPosts = (props) => {
     debugger;
     let postsElements = props.posts.map(
         post => <Post message={post.message} likesCount={post.likesCount}/>
     );
+
+    let newPostElement = React.createRef();
+
+    let addPost = () => {
+        let text = newPostElement.current.value;
+        props.addPost(text);
+
+        newPostElement.current.value="";
+    }
 
     return (
         <div className={classes.postsBlock}>
