@@ -16,11 +16,14 @@ const App = (props) => {
                 {/*<Route path={'/dialogs'} component={Dialogs}/>*/}
                 <Route
                     path={'/dialogs'}
-                    render={() => <Dialogs state={props.state.messagesPage}/>}
+                    render={() => <Dialogs store={props.store}/>}
                 />
                 <Route
                     path={'/profile'}
-                    render={() => <Profile state={props.state.profilePage} addPost={props.addPost}/>}/>
+                    render={() => <Profile
+                        profilePage={props.state.profilePage}
+                        dispatch={props.dispatch}/>}
+                />
             </div>
         </div>
     );
