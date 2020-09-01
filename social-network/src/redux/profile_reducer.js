@@ -7,7 +7,8 @@ let initialState = {
         {id: 2, message: 'it\'s my first post', likesCount: 10},
         {id: 3, message: 'hello!', likesCount: 12},
         {id: 4, message: 'cool', likesCount: 0}
-    ]
+    ],
+    newPostText: 'hello world'
 }
 
 const profileReducer = (state = initialState, action) => {
@@ -29,15 +30,9 @@ const profileReducer = (state = initialState, action) => {
     }
 }
 
-export const addPostActionCreator = () => {
-    return {
-        type: ADD_POST
-    }
-}
-export const updateNewPostTextActionCreator = (text) => {
-    return {
-        type: UPDATE_NEW_POST_TEXT,
-        newText: text
-    }
-}
+export const addPostActionCreator = () => ({type: ADD_POST});
+
+export const updateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text})
+
+
 export default profileReducer;
