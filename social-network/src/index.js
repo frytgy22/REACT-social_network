@@ -4,15 +4,15 @@ import ReactDOM from 'react-dom'
 import * as serviceWorker from './serviceWorker'
 import {BrowserRouter} from "react-router-dom";
 import App from "./App";
+import {Provider} from "./StoreContext";
 
 
 let renderTree = (state) => {
     ReactDOM.render(
         <BrowserRouter>
-            <App
-                state={state}
-                store={store}
-                dispatch={store.dispatch.bind(store)}/>
+            <Provider store={store}>
+                <App/>
+            </Provider>
         </BrowserRouter>,
         document.getElementById('root')
     );

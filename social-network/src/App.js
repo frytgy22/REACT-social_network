@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Header from "./components/header/Header";
 import Navbar from "./components/navbar/Navbar";
-import Dialogs from "./components/dialogs/Dialogs";
 import Profile from "./components/profile/Profile";
 import {Route} from "react-router";
 import DialogsContainer from "./components/dialogs/DialogsContainer";
@@ -17,11 +16,11 @@ const App = (props) => {
                 {/*<Route path={'/dialogs'} component={Dialogs}/>*/}
                 <Route
                     path={'/dialogs'}
-                    render={() => <DialogsContainer store={props.store}/>}
+                    render={() => <DialogsContainer/>}
                 />
                 <Route
                     path={'/profile'}
-                    render={() => <Profile store={props.store}/>}
+                    render={() => <Profile/>}
                 />
             </div>
         </div>
