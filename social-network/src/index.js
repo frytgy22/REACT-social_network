@@ -4,25 +4,15 @@ import ReactDOM from 'react-dom'
 import * as serviceWorker from './serviceWorker'
 import {BrowserRouter} from "react-router-dom";
 import App from "./App";
-import {Provider} from "./StoreContext";
+import {Provider} from "react-redux";
 
-
-let renderTree = (state) => {
-    ReactDOM.render(
-        <BrowserRouter>
-            <Provider store={store}>
-                <App/>
-            </Provider>
-        </BrowserRouter>,
-        document.getElementById('root')
-    );
-}
-
-
-renderTree(store.getState());
-
-store.subscribe(() => {
-    renderTree(store.getState())
-});
+ReactDOM.render(
+    <BrowserRouter>
+        <Provider store={store}>
+            <App/>
+        </Provider>
+    </BrowserRouter>,
+    document.getElementById('root')
+);
 
 serviceWorker.unregister();
