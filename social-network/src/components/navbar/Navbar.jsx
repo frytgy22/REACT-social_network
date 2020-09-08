@@ -15,9 +15,14 @@ const Navbar = () => {
                     <h3>Messages</h3></NavLink>
             </div>
 
-            <div className={classes.item}><a> <h3>News</h3></a></div>
-            <div className={classes.item}><a> <h3>Music</h3></a></div>
-            <div className={classes.item}><a> <h3>Settings</h3></a></div>
+            <div className={classes.item}>
+                <NavLink to="/users" activeClassName={classes.activeLink}>
+                    <h3>Users</h3></NavLink>
+            </div>
+
+            <div className={classes.item}><a><h3>News</h3></a></div>
+            <div className={classes.item}><a><h3>Music</h3></a></div>
+            <div className={classes.item}><a><h3>Settings</h3></a></div>
         </nav>
     )
 }
