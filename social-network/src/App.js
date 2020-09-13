@@ -2,12 +2,12 @@ import React from 'react';
 import './App.css';
 import Header from "./components/header/Header";
 import Navbar from "./components/navbar/Navbar";
-import Profile from "./components/profile/Profile";
 import {Route} from "react-router";
 import DialogsContainer from "./components/dialogs/DialogsContainer";
 import UsersContainer from "./components/users/UsersContainer";
+import ProfileContainer from "./components/profile/ProfileContainer";
 
-const App = (props) => {
+const App = () => {
 
     return (
         <div className={'app-wrapper'}>
@@ -20,8 +20,8 @@ const App = (props) => {
                     render={() => <DialogsContainer/>}
                 />
                 <Route
-                    path={'/profile'}
-                    render={() => <Profile/>}
+                    path={'/profile/:userId?'}
+                    render={() => <ProfileContainer/>}
                 />
 
                 <Route
