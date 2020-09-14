@@ -8,3 +8,11 @@
     width: 60px;
     height: 60px;
 }
+
+.loginBlock{
+    float: right;
+}
+
+.loginBlock a{
+    color: #0c043b;
+}
